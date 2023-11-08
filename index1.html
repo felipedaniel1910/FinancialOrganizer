@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle financeiro</title>
+    <!--Utilizar o Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--Utilizar CSS externo-->
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+        //Aguarda até que a página seja renderizada
+        window.onload = function () {
+            document.querySelector("#btnEntrar").addEventListener("click", entrar);
+        }
+        //Atribui funcionalidades ao botão entrar
+        function entrar() {
+
+            var inputs = document.querySelectorAll("input[type = 'text']")
+            //tratamento de campos vazios
+            for (i = 0; i < inputs.length; i++) {
+                if (inputs[i].value == '') {
+                    alert("Por favor, preencha o login!")
+                    return
+                }
+            }
+            //tratamento de campos vazios
+            var inputs = document.querySelectorAll("input[type = 'password']")
+
+            for (i = 0; i < inputs.length; i++) {
+                if (inputs[i].value == '') {
+                    alert("Por favor, insira sua senha!")
+                    return
+                }
+            }
+            //habilitar icone de carregamento
+            var icone = document.querySelector("#carregarID")
+            icone.setAttribute("class", "carregar")
+            // Redireciona o usuário para a página após cinco segundos
+            setTimeout(function () {
+                window.location.href = "index2.html";
+            }, 5000);
+
+        }
+        //Atribui funcionalidades ao botão registrar-se
+        function registrar() {
+
+        }
+    </script>
+
+</head>
+
+<body>
+    </div>
+
+    <div class="container">
+
+        <div>
+            <h1 id="tituloPage1">Controle Pessoal de Finanças</h1>
+            <hr>
+
+            <h2>Planejamento Financeiro</h2>
+            <div class="texto">
+                <p> O longo dos anos acumulamos muita experiência trabalhando com planejamento financeiro pessoal e
+                    familiar.
+                    Aprendemos muito, principalmente com nossos erros. Acreditamos que o planejamento financeiro está
+                    diretamente relacionado com uma vida feliz e realizada. Sendo assim, nosso objetivo é ajudar você a
+                    dominar sua vida financeira.</p>
+                <p> Este site te ajudará a manter a disciplina economica, controlar seus gastos e avaliar os pontos em
+                    que deve melhorar. Lembre-se, esse é o primeiro passo para seu sucesso!
+                </p>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <img class="img-responsive" src="imagens/pagina_login.png"
+                        alt="Um homeme segurando uma moeda gigante. Ao lado diversas moedas empilhadas e no meio delas em uma plantinha nascendo, trazendo o ideia de que o controle financeiro adequando gera frutos positivos para aqueles que o praticam">
+                </div>
+
+                <div class="col-xs-6">
+                    <!--Formulário-->
+                    <br><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" id="idLogin" class="form-control" name="login"
+                            placeholder="Digite aqui seu usuário...">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" id="idSenha" class="form-control" name="pass"
+                            placeholder="Digite aqui a sua senha...">
+                    </div>
+                    <div class="checkbox">
+                        <label style="color: white;"><input type="checkbox" onclick="mostrarSenha()"> Mostrar
+                            senha</label>
+                    </div>
+                    <script>
+                        //mostrar ou ocultar senha
+                        function mostrarSenha() {
+                            var senha = document.querySelector("#idSenha")
+                            if (senha.type == "password") {
+                                senha.type = "text"
+                            }
+                            else {
+                                senha.type = "password"
+                            }
+                        }
+                    </script>
+                    <!--Botão de login-->
+                    <div class="text-center">
+                        <br>
+                        <!--abrir pagina principal após conferir login e senha e ambos estiverem corretos-->
+                        <a>
+                            <button type="button" id="btnEntrar" class="btn-success btn-lg">Entrar</button>
+                        </a>
+                        <button type="button" id="btnRegistrar" class="btn-primary btn-lg">Registrar-se</button>
+                    </div>
+                    <br>
+                    <div id="carregarID" style="margin-left: 263px;"></div>
+                </div>
+            </div>
+            <br><br>
+            <hr>
+        </div>
+
+        <div class="ctt" id="contato">
+            <p style="text-align: center;"><span class="glyphicon glyphicon-map-marker"></span>Cornélio Procópio - PR,
+                Brasil</p>
+            <p style="text-align: center;"><span class="glyphicon glyphicon-phone"></span>Celular: (15) 99630-2580</p>
+            <p style="text-align: center;"><span class="glyphicon glyphicon-envelope"></span>Email:
+                felipedaniel@alunos.utfpr.edu.br</p>
+            <br><br>
+        </div>
+
+
+</body>
+
+</html>
