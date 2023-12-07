@@ -1,6 +1,6 @@
-# Financial Organization Web Page
+# Financial Organizer Web Page
 
-Welcome to the Financial Organization Web Page project! This repository is dedicated to creating a web page for financial organization using HTML, CSS, and JavaScript. Whether you're looking to manage your personal finances or build a tool for financial tracking, this project provides a foundation for creating an interactive and user-friendly web page.
+Welcome to the Financial Organizer Web Page project! This repository is dedicated to creating a web page for financial organization using HTML, CSS, and JavaScript. Whether you're looking to manage your personal finances or build a tool for financial tracking, this project provides a foundation for creating an interactive and user-friendly web page.
 
 ## Features
 
